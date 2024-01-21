@@ -1,8 +1,6 @@
 package com.ilp.interfaces;
-import com.ilp.entity.Game;
-
+//Interface segregation Principle
 public interface GameCatalog {
     void displayCatalog();
-    void purchaseGame(Game game, PaymentMethod paymentMethod);
 }
 

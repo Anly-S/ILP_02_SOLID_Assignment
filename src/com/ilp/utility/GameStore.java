@@ -8,12 +8,14 @@ import com.ilp.entity.SinglePlayerGame;
 import com.ilp.services.CreditCardPayment;
 import com.ilp.services.PayPalPayment;
 import com.ilp.interfaces.GameCatalog;
+import com.ilp.interfaces.GamePurchase;
 import com.ilp.services.CatalogServices;
 
 public class GameStore {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         GameCatalog catalog = new CatalogServices();
+        GamePurchase purchase = new CatalogServices();
         Game game = null;
 
         // Displaying the catalog
@@ -47,10 +49,10 @@ public class GameStore {
 
         switch (paymentChoice) {
             case 1:
-                catalog.purchaseGame(game, new CreditCardPayment());
+                purchase.purchaseGame(game, new CreditCardPayment());
                 break;
             case 2:
-                catalog.purchaseGame(game, new PayPalPayment());
+                purchase.purchaseGame(game, new PayPalPayment());
                 break;
             default:
                 System.out.println("Invalid payment choice");

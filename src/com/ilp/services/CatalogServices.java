@@ -5,10 +5,11 @@ import com.ilp.entity.MultiPlayerGame;
 import com.ilp.entity.SinglePlayerGame;
 import com.ilp.interfaces.PaymentMethod;
 import com.ilp.interfaces.GameCatalog;
+import com.ilp.interfaces.GamePurchase;
 import java.util.ArrayList;
 import java.util.List;
 //Dependency Inversion Principle
-public class CatalogServices implements GameCatalog {
+public class CatalogServices implements GameCatalog,GamePurchase {
     private List<Game> purchasedGames;
 
     public CatalogServices() {
