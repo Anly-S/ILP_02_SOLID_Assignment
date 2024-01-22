@@ -1,12 +1,11 @@
 package com.ilp.utility;
-
 import java.util.Scanner;
-
 import com.ilp.entity.Game;
 import com.ilp.entity.MultiPlayerGame;
 import com.ilp.entity.SinglePlayerGame;
 import com.ilp.services.CreditCardPayment;
 import com.ilp.services.PayPalPayment;
+import com.ilp.services.PaymentBill;
 import com.ilp.interfaces.GameCatalog;
 import com.ilp.interfaces.GamePurchase;
 import com.ilp.services.CatalogServices;

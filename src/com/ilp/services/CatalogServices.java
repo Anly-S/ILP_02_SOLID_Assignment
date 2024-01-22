@@ -31,12 +31,15 @@ public class CatalogServices implements GameCatalog,GamePurchase {
             System.out.println();
         }
     }
-
     @Override
     public void purchaseGame(Game game, PaymentMethod paymentMethod) {
         paymentMethod.processPayment(game.getPrice());
+        PaymentBill paymentBill = new PaymentBill();
+        paymentBill.generateBill(game.getPrice());
+        
         purchasedGames.add(game);
         System.out.println("Game purchased: " + game.getTitle());
+        paymentBill.paymentMessage();
     }
 
     private List<Game> getAvailableGames() {
